@@ -1,11 +1,11 @@
-import React from "react";
-import Navbar from "../components/Navbar";
-import { ArrowRight, Star } from "lucide-react";
-import { Link } from "react-router-dom";
-import Features from "../components/Features";
+import React from 'react';
+import Navbar from '../components/Navbar';
+import { ArrowRight, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import Features from '../components/Features';
 
 const Home = () => {
-  const heroImage = "/Heroimg.avif";
+  const heroImage = '/Heroimg.avif';
   return (
     <div className="min-h-screen bg-[#faf8f5]">
       <Navbar />
@@ -19,16 +19,14 @@ const Home = () => {
           />
         </div>
 
-
         <div className="relative container mx-auto px-4 z-10">
           <div className="max-w-2xl animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 text-balance text-[#31261c]">
               Elevate Your Living Space
             </h1>
             <p className="text-xl text-muted text-[#EEEAE4] mb-8">
-              Discover timeless furniture pieces crafted with precision and
-              passion. Transform your house into a home with our curated
-              collections.
+              Discover timeless furniture pieces crafted with precision and passion. Transform your
+              house into a home with our curated collections.
             </p>
 
             <Link to="/shop">
@@ -39,12 +37,11 @@ const Home = () => {
                 </button>
               </div>
             </Link>
-
           </div>
         </div>
       </section>
 
-      <Features/>
+      <Features />
     </div>
   );
 };

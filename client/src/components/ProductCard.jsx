@@ -1,10 +1,10 @@
-import React from "react";
-import { ShoppingCart } from "lucide-react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { ShoppingCart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({ products }) => {
   return (
-    <Link to={"/"}>
+    <Link to={'/'}>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {products.map((product) => (
           <div
@@ -23,12 +23,10 @@ const ProductCard = ({ products }) => {
               <h3 className="font-serif font-semibold text-lg mb-2 line-clamp-1">
                 {product.title}
               </h3>
-              <p className="text-[#815331] text-2xl font-bold">
-                ${product.price.toFixed(2)}
-              </p>
+              <p className="text-[#815331] text-2xl font-bold">${product.price.toFixed(2)}</p>
             </div>
 
-            <Link to={"/Shop"}>
+            <Link to={'/Shop'}>
               <button className="w-full h-10 items-center flex justify-center m-4 cursor-pointer bg-[#815331] text-white rounded-xl">
                 <span>
                   <ShoppingCart className="mr-4 h-5 w-5" />

@@ -25,14 +25,14 @@ export default [
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+      'no-unused-vars': [
         'warn',
-        { allowConstantExport: true },
+        {
+          varsIgnorePattern: '^_',
+          argsIgnorePattern: '^_',
+        },
       ],
-      'no-unused-vars': ['warn', { 
-        varsIgnorePattern: '^_',
-        argsIgnorePattern: '^_'
-      }],
     },
   },
 ];
