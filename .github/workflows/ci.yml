@@ -30,11 +30,16 @@ jobs:
           cd server
           npm install
 
-      - name: Lint or Test Server (if available)
+      - name: Lint Server
         run: |
           cd server
-          npm run lint || echo "No linting configured"
-          npm test || echo "No tests configured"
+          npm run lint
+
+      - name: Test Server
+        run: |
+          cd server
+          npm test
+        continue-on-error: true # Remove this line if you want tests to fail the build
 
       # ---------------------
       # Frontend (Client)
@@ -44,7 +49,12 @@ jobs:
           cd client
           npm install
 
+      - name: Lint Client
+        run: |
+          cd client
+          npm run lint
+
       - name: Build Frontend
         run: |
           cd client
-          npm run build || echo "Build completed"
+          npm run build
