@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CTASection = () => {
   return (
@@ -11,8 +12,17 @@ const CTASection = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-primary text-foreground border p-2"> Browse collection</button>
-          <button className="bg-primary text-foreground border p-2"> Contact us</button>
+          <Link to={'/shop'}>
+            <button className="bg-foreground text-primary border p-2 border-foreground hover:bg-amber-50 hover:text-primary rounded">
+              Browse collection
+            </button>
+          </Link>
+
+          <Link to={'/contact'}>
+            <button className="bg-primary text-foreground border p-2 border-foreground hover:bg-foreground hover:text-primary rounded">
+              Contact us
+            </button>
+          </Link>
         </div>
       </div>
     </section>
