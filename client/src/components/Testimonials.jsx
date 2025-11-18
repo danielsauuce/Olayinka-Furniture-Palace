@@ -43,20 +43,14 @@ const Testimonials = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((item) => (
-            <div
-              key={item.id}
-              className="bg-card p-8 rounded-lg shadow-card hover-lift"
-            >
-              
+            <div key={item.id} className="bg-card p-8 rounded-lg shadow-card hover-lift">
               <div className="flex items-center gap-1 mb-4">
                 {Array.from({ length: item.rating }).map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-gold text-gold" />
                 ))}
               </div>
 
-              <p className="text-muted-foreground italic mb-6">
-                "{item.comment}"
-              </p>
+              <p className="text-muted-foreground italic mb-6">"{item.comment}"</p>
 
               <div>
                 <p className="font-semibold">{item.name}</p>
