@@ -1,7 +1,28 @@
 import React from 'react';
 
 const About = () => {
-  return <div>About</div>;
+  return (
+    <section className="py-20">
+      <div className="container mx-auto px-4">
+        
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="animate-fade-in">
+            <h2 className="text-4xl font-serif font-bold mb-6">
+              Craftsmanship that Lasts Generations
+            </h2>
+            <p className="text-muted mb-6">
+              Since 1995, Olayinka Furniture Palace has been dedicated to creating exceptional
+              urniture pieces that stand the test of time. Our skilled artisans combine traditional
+              techniques with contemporary design to deliver furniture that tells a story.{' '}
+            </p>
+            <p className='text-muted mb-8'> Every piece is carefully crafted using premium materials, ensuring </p>
+          </div>
+
+          <div></div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default About;
