@@ -74,11 +74,15 @@ function Footer() {
                 <Mail className="h-4 w-4" /> <span>info@olayinkafurniture.com</span>
               </li>
               <li className="flex items-center space-x-2 text-muted-foreground">
-                <MapPin className="h-4 w-4" />
+                <MapPin className="h-6 w-6" />
                 <span>1, Aroworamimo street, Igbo-olomu, Agric Ikorodu, Lagos State, Nigeria.</span>
               </li>
             </ul>
           </div>
+        </div>
+
+        <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} Olayinka Furniture Palace. All rights reserved.</p>
         </div>
       </div>
     </footer>
