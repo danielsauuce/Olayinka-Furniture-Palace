@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import About from './pages/About';
-import AuthPage from './pages/AuthPage';
-import Cart from './pages/Cart';
-import Contact from './pages/Contact';
-import Shop from './pages/Shop';
+import About from './views/About';
+import AuthPage from './views/AuthPage';
+import Cart from './views/Cart';
+import Contact from './views/Contact';
+import Shop from './views/Shop';
 import Footer from './components/Footer';
-import Home from './pages/Home';
+import Home from './views/Home';
 
 function App() {
   return (
