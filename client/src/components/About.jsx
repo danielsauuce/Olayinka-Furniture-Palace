@@ -21,7 +21,6 @@ const About = () => {
             </p>
             <Link to={'/about'}>
               <button className="bg-primary text-foreground p-2 rounded">
-                {' '}
                 Learn More About Us
               </button>
             </Link>
