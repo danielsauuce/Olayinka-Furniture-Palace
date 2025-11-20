@@ -25,16 +25,19 @@ const ProductCard = ({ products }) => {
               </h3>
               <p className="text-[#815331] text-2xl font-bold">${product.price.toFixed(2)}</p>
             </div>
-
             <Link to={'/Shop'}>
-              <button className="w-full h-10 items-center flex justify-center m-4 cursor-pointer bg-[#815331] text-white rounded-xl">
+              <button className=" w-110 rounded-md h-10 items-center flex justify-center m-4 cursor-pointer bg-[#815331] text-white">
                 <span>
                   <ShoppingCart className="mr-4 h-5 w-5" />
                 </span>
                 Add to Cart
               </button>
             </Link>
+
+            
           </div>
+          
+          
         ))}
       </div>
     </Link>
