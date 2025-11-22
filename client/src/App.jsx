@@ -1,13 +1,11 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
 import About from './views/About';
 import AuthPage from './views/AuthPage';
-import Cart from './views/Cart';
 import Contact from './views/Contact';
 import Shop from './views/Shop';
-import Footer from './components/Footer';
 import Home from './views/Home';
+import NotFound from './views/NotFound';
 
 function App() {
   return (
@@ -17,6 +15,7 @@ function App() {
       <Route path="/shop" element={<Shop />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
