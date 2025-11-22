@@ -20,6 +20,10 @@
   --color-accent: hsl(150 30% 40%);
   --color-destructive: hsl(0 72% 51%);
 
+  /* Gold color for accents, stars, luxury feel */
+  --color-gold: hsl(45 80% 55%);
+  --color-gold-foreground: hsl(25 30% 15%);
+
   --font-serif: 'Playfair Display', ui-serif, Georgia, Cambria, 'Times New Roman', serif;
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 
