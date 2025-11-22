@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: 'class', // enables dark theme toggling
+  darkMode: 'class',
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {}, // empty because your colors come from @theme
+    extend: {},
   },
   plugins: [],
 };
