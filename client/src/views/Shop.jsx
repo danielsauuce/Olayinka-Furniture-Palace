@@ -1,9 +1,11 @@
 import { useState, useMemo } from 'react';
 import ProductCard from '../components/ProductCard';
+import { furnitureItems } from '../data/furnitureItems';
 
 const categories = ['All', 'Sofas', 'Tables', 'Chairs', 'Beds', 'Storage'];
 
-const Shop = ({ products = [] }) => {
+const Shop = ({}) => {
+  const products = furnitureItems;
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [priceRange, setPriceRange] = useState([0, 2000]);
   const [sortBy, setSortBy] = useState('newest');
