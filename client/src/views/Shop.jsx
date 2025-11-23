@@ -1,57 +1,6 @@
 import { useState, useMemo } from 'react';
 import ProductCard from '../components/ProductCard';
 
-const furnitureItems = [
-  {
-    id: 1,
-    category: 'Sofas',
-    title: 'Classic Leather Sofa',
-    price: 1299.99,
-    image:
-      'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 2,
-    category: 'Tables',
-    title: 'Modern Dining Table',
-    price: 899.99,
-    image:
-      'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 3,
-    category: 'Chairs',
-    title: 'Ergonomic Office Chair',
-    price: 449.99,
-    image:
-      'https://images.unsplash.com/photo-1589571894960-20bbe2828d0a?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 4,
-    category: 'Beds',
-    title: 'Luxury Upholstered Bed',
-    price: 1599.99,
-    image:
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 5,
-    category: 'Chairs',
-    title: 'Minimalist Lounge Chair',
-    price: 799.99,
-    image:
-      'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 6,
-    category: 'Tables',
-    title: 'Rustic Coffee Table',
-    price: 349.99,
-    image:
-      'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=800&q=80',
-  },
-];
-
 const categories = ['All', 'Sofas', 'Tables', 'Chairs', 'Beds', 'Storage'];
 
 const Shop = ({ products = [] }) => {
@@ -113,7 +62,7 @@ const Shop = ({ products = [] }) => {
                       className={`w-full text-left px-4 py-2 rounded transition-colors ${
                         selectedCategory === category
                           ? 'bg-[#815331] text-white'
-                          : 'bg-muted text-muted-foreground hover:bg-green-300'
+                          : 'bg-muted text-muted-foreground hover:bg-[#815331]/10'
                       }`}
                     >
                       {category}
@@ -170,7 +119,7 @@ const Shop = ({ products = [] }) => {
             {filteredAndSortedProducts.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 {filteredAndSortedProducts.map((product) => (
-                  <ProductCard products={furnitureItems} />
+                  <ProductCard key={product.id} product={product} />
                 ))}
               </div>
             ) : (
