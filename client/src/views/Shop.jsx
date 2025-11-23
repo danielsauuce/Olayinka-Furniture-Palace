@@ -3,7 +3,7 @@ import ProductCard from '../components/ProductCard';
 
 const categories = ['All', 'Sofas', 'Tables', 'Chairs', 'Beds', 'Storage'];
 
-const product = [
+const furnitureItems = [
   {
     id: 1,
     category: 'Sofas',
@@ -58,7 +58,6 @@ const Shop = ({ products = [] }) => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [priceRange, setPriceRange] = useState([0, 2000]);
   const [sortBy, setSortBy] = useState('newest');
-
 
   // Filter and sort products
   const filteredAndSortedProducts = useMemo(() => {
