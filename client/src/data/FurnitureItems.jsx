@@ -47,4 +47,52 @@ export const furnitureItems = [
     image:
       'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=800&q=80',
   },
+  {
+    id: 4,
+    category: 'Beds',
+    title: 'Luxury Upholstered Bed',
+    price: 1599.99,
+    image:
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 5,
+    category: 'Chairs',
+    title: 'Minimalist Lounge Chair',
+    price: 799.99,
+    image:
+      'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 6,
+    category: 'Tables',
+    title: 'Rustic Coffee Table',
+    price: 349.99,
+    image:
+      'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 4,
+    category: 'Beds',
+    title: 'Luxury Upholstered Bed',
+    price: 1599.99,
+    image:
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 5,
+    category: 'Chairs',
+    title: 'Minimalist Lounge Chair',
+    price: 799.99,
+    image:
+      'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 6,
+    category: 'Tables',
+    title: 'Rustic Coffee Table',
+    price: 349.99,
+    image:
+      'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=800&q=80',
+  },
 ];

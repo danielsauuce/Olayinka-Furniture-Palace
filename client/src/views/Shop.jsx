@@ -9,6 +9,7 @@ const Shop = ({}) => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [priceRange, setPriceRange] = useState([0, 2000]);
   const [sortBy, setSortBy] = useState('newest');
+  const [visibleCount, setVisibleCount] = useState(6);
 
   // Filter and sort products
   const filteredAndSortedProducts = useMemo(() => {
@@ -41,6 +42,11 @@ const Shop = ({}) => {
 
     return result;
   }, [products, selectedCategory, priceRange, sortBy]);
+
+  const visibleProducts = filteredAndSortedProducts.slice(0, visibleCount);
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 3);
+  };
 
   return (
     <div className="min-h-screen py-12 bg-background text-foreground">
@@ -118,12 +124,26 @@ const Shop = ({}) => {
             </div>
 
             {/* Products */}
-            {filteredAndSortedProducts.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                {filteredAndSortedProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-                ))}
-              </div>
+            {visibleProducts.length > 0 ? (
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                  {visibleProducts.map((product) => (
+                    <ProductCard key={product.id} product={product} />
+                  ))}
+                </div>
+
+                {/* Load More Button */}
+                {visibleCount < filteredAndSortedProducts.length && (
+                  <div className="text-center mt-8">
+                    <button
+                      onClick={handleLoadMore}
+                      className="px-6 py-3 bg-white text-[hsl(25_45%_35%)] border-2 border-[hsl(25_45%_35%)] rounded-md shadow hover:bg-[hsl(25_45%_35%)] hover:text-white transition"
+                    >
+                      View More
+                    </button>
+                  </div>
+                )}
+              </>
             ) : (
               <div className="text-center py-20">
                 <p className="text-muted-foreground text-lg">
