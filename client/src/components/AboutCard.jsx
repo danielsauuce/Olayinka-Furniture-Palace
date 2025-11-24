@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const About = () => {
+const AboutCard = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -42,4 +42,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutCard;

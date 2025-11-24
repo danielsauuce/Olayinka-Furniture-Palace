@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { furnitureItems } from '../data/FurnitureItems';
 
 const Features = () => {
-  const featuresProduct = furnitureItems.slice(0,6)
+  const featuresProduct = furnitureItems.slice(0, 6);
 
   return (
     <section className="bg-[linear-gradient(180deg,#F8F5EE,#EEE9E0)] py-20">
@@ -37,7 +37,5 @@ const Features = () => {
     </section>
   );
 };
-
-
 
 export default Features;
