@@ -114,3 +114,27 @@
 {"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:40:45.412Z"}
 {"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:41:12.982Z"}
 {"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:41:22.262Z"}
+{"level":"info","message":"Rate limiter initialized with Redis","service":"server","timestamp":"2025-11-27T22:50:56.830Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:50:56.894Z"}
+{"level":"info","message":"Redis client connected successfully","service":"server","timestamp":"2025-11-27T22:50:56.913Z"}
+{"level":"info","message":"Rate limiter initialized with Redis","service":"server","timestamp":"2025-11-27T22:52:20.795Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:52:20.849Z"}
+{"level":"info","message":"Redis client connected successfully","service":"server","timestamp":"2025-11-27T22:52:20.865Z"}
+{"level":"info","message":"Rate limiter initialized with Redis","service":"server","timestamp":"2025-11-27T22:52:25.462Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:52:25.494Z"}
+{"level":"info","message":"Redis client connected successfully","service":"server","timestamp":"2025-11-27T22:52:25.554Z"}
+{"level":"info","message":"Rate limiter initialized with Redis","service":"server","timestamp":"2025-11-27T22:52:41.001Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:52:41.035Z"}
+{"level":"info","message":"Redis client connected successfully","service":"server","timestamp":"2025-11-27T22:52:41.097Z"}
+{"level":"info","message":"Rate limiter initialized with Redis","service":"server","timestamp":"2025-11-27T22:52:43.877Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:52:43.908Z"}
+{"level":"info","message":"Redis client connected successfully","service":"server","timestamp":"2025-11-27T22:52:43.961Z"}
+{"level":"info","message":"Rate limiter initialized with Redis","service":"server","timestamp":"2025-11-27T22:52:46.505Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:52:46.588Z"}
+{"level":"info","message":"Redis client connected successfully","service":"server","timestamp":"2025-11-27T22:52:46.691Z"}
+{"level":"info","message":"Rate limiter initialized with Redis","service":"server","timestamp":"2025-11-27T22:52:50.673Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:52:50.753Z"}
+{"level":"info","message":"Redis client connected successfully","service":"server","timestamp":"2025-11-27T22:52:51.092Z"}
+{"level":"info","message":"Rate limiter initialized with Redis","service":"server","timestamp":"2025-11-27T22:52:59.194Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T22:52:59.241Z"}
+{"level":"info","message":"Redis client connected successfully","service":"server","timestamp":"2025-11-27T22:52:59.315Z"}
