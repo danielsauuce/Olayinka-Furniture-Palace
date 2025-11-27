@@ -8,21 +8,15 @@ let rateLimiter;
 try {
   redisClient = new Redis(process.env.REDIS_URL || 'redis://localhost:6379');
 
-  redisClient.on('connect', () => {
-    logger.info('Redis client connected successfully');
-  });
+  redisClient.on('connect', () => logger.info('Redis client connected successfully'));
+  redisClient.on('error', (err) => logger.error('Redis Client Error:', { error: err.message }));
 
-  redisClient.on('error', (err) => {
-    logger.error('Redis Client Error:', { error: err.message });
-  });
-
-  // DDos protection and rate limiting
   rateLimiter = new RateLimiterRedis({
     storeClient: redisClient,
     keyPrefix: 'middleware',
-    points: 10, // Number of requests
-    duration: 60, // Per 60 seconds
-    blockDuration: 60, // Block for 60 seconds if exceeded
+    points: 10,
+    duration: 60,
+    blockDuration: 60,
   });
 
   logger.info('Rate limiter initialized with Redis');
@@ -30,4 +24,5 @@ try {
   logger.error('Failed to initialize Redis:', { error: error.message });
 }
 
+// Export default object
 export default { redisClient, rateLimiter };

@@ -8,7 +8,7 @@ import helmet from 'helmet';
 import cors from 'cors';
 import corsOptions from './config/corsOptions.mjs';
 import authRoutes from './routes/auth-route.js';
-import rateLimiter from './config/redisClient.js';
+import rateLimiterMiddleware from './middleware/rateLimiter.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -20,6 +20,7 @@ app.use(helmet());
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(errorHandler);
 
 // logging middleware
 app.use((req, res, next) => {
@@ -29,18 +30,7 @@ app.use((req, res, next) => {
 });
 
 //Rate limit middleware
-app.use((req, res, next) => {
-  rateLimiter
-    .consume(req.ip)
-    .then(() => next())
-    .catch(() => {
-      logger.warn(`Rate limit exceeded for IP ${req.ip}`);
-      res.status(429).json({
-        success: false,
-        message: 'Too many requests',
-      });
-    });
-});
+app.use(rateLimiterMiddleware);
 
 // Routes
 app.use('/auth/', authRoutes);
