@@ -1,64 +1,57 @@
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T18:53:12.250Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T18:53:12.264Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T18:53:17.460Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T18:53:17.481Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T18:54:45.467Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T18:54:45.482Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T18:54:49.270Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T18:54:49.279Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:05:54.876Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:05:54.884Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:06:32.898Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:06:32.909Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:06:51.570Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:06:51.578Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:07:23.689Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:07:23.696Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:07:36.053Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:07:36.066Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:07:47.138Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:07:47.149Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:07:51.187Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:07:51.195Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:08:01.010Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:08:01.022Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:08:45.656Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:08:45.664Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:08:46.836Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:08:46.846Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:09:11.062Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:09:11.072Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:09:15.185Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:09:15.193Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:09:16.357Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:09:16.369Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:09:47.613Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:09:47.627Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:09:55.480Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:09:55.493Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:10:20.650Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:10:20.660Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:10:22.556Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:10:22.567Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:10:40.096Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:10:40.109Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:10:48.478Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:10:48.486Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:11:45.499Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:11:45.510Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:11:51.053Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:11:51.062Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:11:52.276Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:11:52.284Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:13:06.808Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:13:06.815Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:13:34.142Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:13:34.152Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:13:39.628Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:13:39.638Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:13:52.453Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:13:52.463Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:13:56.009Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:13:56.023Z"}
-{"level":"info","message":"Server starting...","service":"server","timestamp":"2025-11-27T19:14:01.518Z"}
-{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:14:01.530Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:19:43.973Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:19:49.920Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:20:37.445Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:20:39.361Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:20:41.300Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:20:45.900Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:20:46.806Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:20:50.487Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:20:52.614Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:20:54.376Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:20:56.041Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:21:00.449Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:21:03.506Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:21:04.896Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:21:21.301Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:35:13.745Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:35:17.085Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:35:20.575Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:35:24.431Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:35:30.767Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:35:32.593Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:35:36.645Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:35:37.438Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:35:48.879Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:37:45.134Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:37:51.537Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:37:58.206Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:38:07.961Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:38:09.607Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:38:13.425Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:38:17.108Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:38:18.193Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:39:32.233Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:40:01.486Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:40:39.297Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:40:58.561Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:41:16.518Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:41:20.917Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:41:23.856Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:44:02.163Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:44:07.272Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:44:08.162Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:48:09.863Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:48:12.282Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:48:15.078Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:48:19.511Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:54:17.196Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:55:12.563Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:55:17.607Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:55:26.776Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:55:33.790Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:55:38.096Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:55:48.348Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:55:54.465Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:55:58.446Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:56:02.711Z"}
+{"level":"info","message":"Server is running on PORT 3000","service":"server","timestamp":"2025-11-27T19:56:10.308Z"}

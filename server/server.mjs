@@ -9,8 +9,6 @@ const PORT = process.env.PORT || 3000;
 
 dbConnection();
 
-logger.info('Server starting...');
-
 app.use(express.json());
 
 app.listen(PORT, () => {
