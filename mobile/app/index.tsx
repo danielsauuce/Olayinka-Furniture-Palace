@@ -1,10 +1,14 @@
-import { Text, View } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 import '../global.css';
 
 export default function Index() {
   return (
-    <View className="min-h-screen mt-2">
-      <Text className="bg-red-100 p-3 border">Olayinka furniture palace </Text>
+    <View className="min-h-screen bg-[#FDFBF7]">
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View className="px-5 pt-5 pb-3 items-center">
+          <Text className="text-3xl">olayinka</Text>
+        </View>
+      </ScrollView>
     </View>
   );
 }
