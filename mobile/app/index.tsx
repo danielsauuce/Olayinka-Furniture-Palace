@@ -8,7 +8,7 @@ const LandingPage = () => {
   return (
     <View>
       <Text>LandingPage</Text>
-      <Text>Welcome to the Mobile App!</Text>
+      <Text>Welcome to the Jesus App!</Text>
     </View>
   );
 };

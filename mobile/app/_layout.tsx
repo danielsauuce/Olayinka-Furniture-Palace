@@ -1,6 +1,5 @@
 import { Stack } from 'expo-router';
-import SafeScreen from '@/components/safeScreen';
-import { Colors } from '@/constants/colors';
+import SafeScreen from '../src/components/safeScreen';
 
 export default function RootLayout() {
   return (
