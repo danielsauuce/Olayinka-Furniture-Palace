@@ -1,19 +1,33 @@
 {
-  "devDependencies": {
-    "husky": "^9.1.7",
-    "lint-staged": "^16.2.7"
-  },
-  "scripts": {
-    "prepare": "husky"
-  },
-  "lint-staged": {
-    "client/**/*.{js,jsx,ts,tsx,json,css,md}": [
-      "cd client && npm run format",
-      "cd client && npm run lint"
+    "name": "olayinka-furniture-palace",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+      "client",
+      "mobile",
+      "server"
     ],
-    "server/**/*.{js,ts,tsx,json,md}": [
-      "cd server && npm run format",
-      "cd server && npm run lint"
-    ]
+    "scripts": {
+      "lint": "npm run lint --workspaces",
+      "lint:fix": "npm run lint:fix --workspaces",
+      "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,html}\" --ignore-path .gitignore",
+      "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md,css,html}\" --ignore-path .gitignore",
+      "type-check": "npm run type-check --workspaces --if-present",
+      "test": "npm run test --workspaces --if-present"
+    },
+    "lint-staged": {
+      "**/*.{js,jsx,ts,tsx}": [
+        "eslint --fix",
+        "prettier --write"
+      ],
+      "**/*.{json,md,css,html}": [
+        "prettier --write"
+      ]
+    },
+    "devDependencies": {
+      "prettier": "^3.1.0",
+      "eslint": "^8.55.0",
+      "husky": "^8.0.3",
+      "lint-staged": "^15.2.0"
+    }
   }
-}

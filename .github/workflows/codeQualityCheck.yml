@@ -1,92 +1,110 @@
-name: Code Quality Checks
+name: Code Quality Check
 
 on:
   push:
-    branches:
-      - development
-      - main
+    branches: [main, develop]
   pull_request:
-    branches:
-      - development
-      - main
+    branches: [main, develop]
 
 jobs:
-  backend:
-    name: Backend - Lint & Format
+  quality-check:
+    name: Code Quality
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [18.x, 20.x]
+
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
-          cache-dependency-path: server/package-lock.json
+          cache: 'npm'
 
-      - name: Install Server Dependencies
-        working-directory: ./server
+      - name: Install dependencies
         run: npm ci
 
-      - name: Lint Server
-        working-directory: ./server
+      - name: Run ESLint
         run: npm run lint
 
-      - name: Check Server Formatting
-        working-directory: ./server
-        run: npm run format:check 
-
-  frontend:
-    name: Frontend - Lint, Format & Build
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20.x]
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-          cache-dependency-path: client/package-lock.json
-
-      - name: Install Client Dependencies
-        working-directory: ./client
-        run: npm ci
-
-      - name: Lint Client
-        working-directory: ./client
-        run: npm run lint
-
-      - name: Check Client Formatting
-        working-directory: ./client
+      - name: Check Prettier formatting
         run: npm run format:check
 
-      - name: Build Frontend
+      - name: Type check
+        run: npm run type-check
+        continue-on-error: true
+
+      - name: Run tests
+        run: npm run test
+        continue-on-error: true
+
+  client-build:
+    name: Build Client
+    runs-on: ubuntu-latest
+    needs: quality-check
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build client
         working-directory: ./client
         run: npm run build
 
-  summary:
-    name: CI Summary
+  server-build:
+    name: Build Server
     runs-on: ubuntu-latest
-    needs: [backend, frontend]
-    if: always()
+    needs: quality-check
+
     steps:
-      - name: Check CI Status
-        run: |
-          if [ "`\({{ needs.backend.result }}" == "success" ] && [ "\)`{{ needs.frontend.result }}" == "success" ]; then
-            echo "✅ All checks passed!"
-            exit 0
-          else
-            echo "❌ Checks failed!"
-            echo "Backend: ${{ needs.backend.result }}"
-            echo "Frontend: ${{ needs.frontend.result }}"
-            exit 1
-          fi
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build server
+        working-directory: ./server
+        run: npm run build
+        continue-on-error: true
+
+  mobile-check:
+    name: Mobile App Check
+    runs-on: ubuntu-latest
+    needs: quality-check
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check Expo project
+        working-directory: ./mobile
+        run: npx expo-doctor
