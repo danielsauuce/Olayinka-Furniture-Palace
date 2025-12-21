@@ -1,17 +1,33 @@
 module.exports = {
   root: true,
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
   extends: [
-    'expo',
     'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react-native/all',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
+    'prettier', // disables ESLint rules that conflict with Prettier
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'prettier'],
-  rules: {
-    'prettier/prettier': 'warn',
-    '@typescript-eslint/no-unused-vars': 'warn',
-    '@typescript-eslint/no-explicit-any': 'warn',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 12,
+    sourceType: 'module',
   },
-  ignorePatterns: ['/node_modules', '/dist', '/.expo'],
+  plugins: ['react', 'react-native', '@typescript-eslint', 'prettier'],
+  rules: {
+    'prettier/prettier': 'error',
+    'react/react-in-jsx-scope': 'off',
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
 };
