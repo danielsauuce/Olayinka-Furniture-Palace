@@ -1,6 +1,7 @@
 import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import React from 'react';
+import "../global.css"
 
 type SafeScreenProps = {
   children: React.ReactNode;
@@ -11,10 +12,10 @@ const SafeScreen = ({ children }: SafeScreenProps) => {
 
   return (
     <View
-      className="flex-1 bg-primary"
       style={{
+        flex: 1,
+        backgroundColor: 'blue',
         paddingTop: insets.top,
-        paddingBottom: insets.bottom,
         paddingLeft: insets.left,
         paddingRight: insets.right,
       }}

@@ -1,6 +1,7 @@
 import { Tabs } from 'expo-router';
 import { Colors } from '@/constants/colors';
 import { Home, ShoppingBag, Store, User, MessageCircle } from 'lucide-react-native';
+// import "../../global.css"
 
 export default function TabsLayout() {
   return (

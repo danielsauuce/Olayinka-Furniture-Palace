@@ -1,33 +1,33 @@
 {
-    "name": "olayinka-furniture-palace",
-    "version": "1.0.0",
-    "private": true,
-    "workspaces": [
-      "client",
-      "mobile",
-      "server"
-    ],
-    "scripts": {
-      "lint": "npm run lint --workspaces",
-      "lint:fix": "npm run lint:fix --workspaces",
-      "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,html}\" --ignore-path .gitignore",
-      "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md,css,html}\" --ignore-path .gitignore",
-      "type-check": "npm run type-check --workspaces --if-present",
-      "test": "npm run test --workspaces --if-present"
-    },
-    "lint-staged": {
-      "**/*.{js,jsx,ts,tsx}": [
-        "eslint --fix",
-        "prettier --write"
-      ],
-      "**/*.{json,md,css,html}": [
-        "prettier --write"
-      ]
-    },
-    "devDependencies": {
-      "prettier": "^3.1.0",
-      "eslint": "^8.55.0",
-      "husky": "^8.0.3",
-      "lint-staged": "^15.2.0"
-    }
+  "name": "Olayinka-Furniture-Palace",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server",
+    "mobile"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
+    "test": "turbo run test",
+    "format": "turbo run format"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.3",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "turbo": "^2.7.1",
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "npm@10.0.0",
+  "dependencies": {
+    "@types/react": "~19.1.10",
+    "@types/react-dom": "~19.1.7",
+    "react-native-reanimated": "3",
+    "react-native-safe-area-context": "~5.6.0"
   }
+}

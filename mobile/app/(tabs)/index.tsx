@@ -1,13 +1,13 @@
-import { ScrollView, Text, View, Image } from 'react-native';
-import { ArrowRight, ShoppingBag, Star } from 'lucide-react-native';
+import { ScrollView, Text, View, Image, StyleSheet } from 'react-native';
+import { ArrowRight, Container, ShoppingBag, Star } from 'lucide-react-native';
 import { useRouter } from 'expo-router';
+import "../../global.css"
 
 export default function Index() {
   const router = useRouter();
   return (
-    <View className="min-h-screen bg-light-background flex-1">
+    <View className="flex-1 bg-light-background" style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        {/* Header */}
         <View className="px-5 pt-5 pb-2 items-center">
           <Text className="text-4xl font-bold tracking-tight text-light-primary">Olayinka</Text>
           <Text className="text-lg uppercase tracking-widest mt-1 text-light-textSecondary">
@@ -15,7 +15,6 @@ export default function Index() {
           </Text>
         </View>
 
-        {/* Hero Section */}
         <View className=" px-5 py-4 mt-5">
           <View className=" rounded-3xl overflow-hidden h-80 flex-row bg-light-primary">
             <View className="flex-1 p-7 justify-center">
@@ -42,9 +41,14 @@ export default function Index() {
           </View>
         </View>
 
-        {/* Featured Collection */}
         <View className="border border-red-500 px-5 py-6 mt-5"></View>
       </ScrollView>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#20232a',
+  }
+})

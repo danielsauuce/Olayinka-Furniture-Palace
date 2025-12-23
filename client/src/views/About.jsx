@@ -17,10 +17,6 @@ function About() {
         </div>
       </section>
 
-
-
-
-
       <StatsSection />
     </div>
   );
