@@ -8,7 +8,7 @@ let redisClient;
 let rateLimiter;
 
 try {
-  const connectionString = process.env.REDIS_URL;
+  const connectionString = process.env.REDIS_URi;
   if (!connectionString) {
     throw new Error('REDIS_URL environment variable is not set.');
   }
