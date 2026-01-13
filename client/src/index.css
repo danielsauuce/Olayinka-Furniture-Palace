@@ -1,33 +1,62 @@
 @import 'tailwindcss';
-@custom-variant dark (&:where(.dark, .dark *));
 
+/* Define your semantic colors as theme variables */
 @theme {
   --color-background: hsl(40 20% 97%);
   --color-foreground: hsl(25 30% 15%);
+
   --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(25 30% 15%);
+  --color-card-foreground: hsl(222 47% 11%);
 
-  --color-primary: hsl(25 45% 35%);
-  --color-primary-foreground: hsl(40 20% 97%);
-  --color-primary-light: hsl(25 45% 45%);
-  --color-primary-dark: hsl(25 50% 25%);
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(222 47% 11%);
 
-  --color-secondary: hsl(40 30% 90%);
-  --color-muted: hsl(40 15% 92%);
-  --color-muted-foreground: hsl(25 20% 45%);
+  --color-primary: hsl(25 30% 35%);
+  --color-primary-foreground: hsl(40 33% 96%);
+  --color-primary-light: hsl(25 30% 45%);
+  --color-primary-dark: hsl(25 30% 25%);
 
-  --color-border: hsl(40 20% 85%);
-  --color-accent: hsl(150 30% 40%);
+  --color-secondary: hsl(40 33% 92%);
+  --color-secondary-foreground: hsl(222 47% 11%);
+
+  --color-muted: hsl(40 20% 90%);
+  --color-muted-foreground: hsl(215 16% 47%);
+
+  --color-accent: hsl(145 30% 25%);
+  --color-accent-foreground: hsl(40 33% 96%);
+  --color-accent-light: hsl(145 30% 35%);
+
+  --color-gold: hsl(45 85% 55%);
+  --color-gold-foreground: hsl(222 47% 11%);
+
   --color-destructive: hsl(0 72% 51%);
+  --color-destructive-foreground: hsl(0 0% 100%);
 
-  /* Gold color for accents, stars, luxury feel */
-  --color-gold: hsl(45 80% 55%);
-  --color-gold-foreground: hsl(25 30% 15%);
+  --color-border: hsl(214 32% 91%);
+  --color-input: hsl(214 32% 91%);
+  --color-ring: hsl(222 47% 11%);
 
-  --font-serif: 'Playfair Display', ui-serif, Georgia, Cambria, 'Times New Roman', serif;
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  /* You can also keep radius here */
+  --radius: 0.75rem;
+}
 
-  --color-primary-h: 25;
-  --color-primary-s: 45%;
-  --color-primary-l: 35%;
+/* Dark mode overrides — just redefine the same variables */
+.dark {
+  @theme {
+    --color-background: hsl(222 47% 11%);
+    --color-foreground: hsl(210 40% 98%);
+
+    --color-card: hsl(222 47% 15%);
+    --color-card-foreground: hsl(210 40% 98%);
+
+    --color-popover: hsl(222 47% 15%);
+    --color-popover-foreground: hsl(210 40% 98%);
+
+    --color-primary: hsl(25 30% 55%);
+    --color-primary-foreground: hsl(222 47% 11%);
+    --color-primary-light: hsl(25 30% 65%);
+    --color-primary-dark: hsl(25 30% 45%);
+
+    /* ... do the same for all others ... */
+  }
 }
