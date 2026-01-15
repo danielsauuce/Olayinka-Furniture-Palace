@@ -1,10 +1,11 @@
 import LeftPanelAuthPage from '../components/LeftPanelAuthPage';
+import RightPanelAuthPage from '../components/RightPanelAuthPage';
 
 function AuthPage() {
   return (
     <div className="min-h-screen flex">
-      {/* Left Panel - Image & Branding */}
       <LeftPanelAuthPage />
+      <RightPanelAuthPage />
     </div>
   );
 }

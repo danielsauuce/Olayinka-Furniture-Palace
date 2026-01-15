@@ -11,7 +11,7 @@ const LeftPanelAuthPage = () => {
         className="absolute inset-0 bg-cover bg-center"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via bg-primary/10 to bg-primary-dark/30 " />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via bg-primary/30 to bg-primary-dark/30 " />
 
       {/* Decorative circle at the top */}
       <div className="absolute top-0 left-0 w-full h-full">
