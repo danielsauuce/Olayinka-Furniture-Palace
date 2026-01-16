@@ -1,6 +1,7 @@
 import { Sparkles } from 'lucide-react';
 import React, { useState } from 'react';
 import SignUpForm from './SignUpForm';
+import LoginForm from './LoginForm';
 
 const RightPanelAuthPage = () => {
   const [isLogin, SetIsLogin] = useState(true);
@@ -53,7 +54,7 @@ const RightPanelAuthPage = () => {
           </button>
         </div>
 
-        <SignUpForm />
+        {isLogin ? <LoginForm /> : <SignUpForm />}
       </div>
     </div>
   );
