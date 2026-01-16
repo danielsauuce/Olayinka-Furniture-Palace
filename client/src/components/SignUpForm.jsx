@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Mail, Lock } from 'lucide-react';
+import { User, Mail, Lock, ArrowRight } from 'lucide-react';
 
 const signupFields = [
   {
@@ -54,6 +54,27 @@ const SignUpForm = () => {
           </div>
         );
       })}
+
+      <button
+        type="submit"
+        className="w-full h-13 text-amber-50 font-medium bg-primary hover:bg-primary-dark transition-all duration-300 group justify-center flex"
+      >
+        <span className="flex items-center gap-2">
+          Create Account
+          <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+        </span>
+      </button>
+
+      <p className="text-center text-sm text-muted-foreground">
+        By signing up, you agree to our{' '}
+        <a href="#" className="text-primary hover:underline">
+          Terms{' '}
+        </a>
+        and{' '}
+        <a href="#" className="text-primary hover:underline">
+          Privacy Policy
+        </a>
+      </p>
     </form>
   );
 };

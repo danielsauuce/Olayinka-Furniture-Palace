@@ -55,8 +55,6 @@ const RightPanelAuthPage = () => {
 
         <SignUpForm />
       </div>
-
-      
     </div>
   );
 };
