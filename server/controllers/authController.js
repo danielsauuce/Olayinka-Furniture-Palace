@@ -1,13 +1,24 @@
 import User from '../models/user.mjs';
 import generateTokens from '../utils/generateToken.js';
 import logger from '../utils/logger.js';
-import { registerValidation, loginValidation } from '../utils/userValidation.js';
-import arcjet, { shield, detectBot, tokenBucket } from '@arcjet/node';
+import {
+  registerValidation,
+  loginValidation,
+  changePasswordValidation,
+} from '../utils/userValidation.js';
+import { arcjetRules, handleArcjetDecision } from '../config/arject.js';
 
 export const registerUser = async (req, res) => {
   logger.info('Registration endpoint hit');
 
   try {
+    // Arcjet protection
+    const decision = await arcjetRules.registration.protect(req);
+    const blocked = handleArcjetDecision(decision, logger, 'registration');
+    if (blocked) {
+      return res.status(blocked.status).json(blocked.response);
+    }
+
     const { error } = registerValidation.validate(req.body);
 
     if (error) {
@@ -62,6 +73,13 @@ export const loginUser = async (req, res) => {
   logger.info('Login endpoint hit');
 
   try {
+    // Arcjet protection
+    const decision = await arcjetRules.login.protect(req);
+    const blocked = handleArcjetDecision(decision, logger, 'login');
+    if (blocked) {
+      return res.status(blocked.status).json(blocked.response);
+    }
+
     const { error } = loginValidation.validate(req.body);
 
     if (error) {
@@ -125,8 +143,131 @@ export const loginUser = async (req, res) => {
   }
 };
 
-export const logoutUser = async (req, res) => {};
+export const changePassword = async (req, res) => {
+  try {
+    // Arcjet protection
+    const decision = await arcjetRules.passwordChange.protect(req);
+    const blocked = handleArcjetDecision(decision, logger, 'password change');
+    if (blocked) {
+      return res.status(blocked.status).json(blocked.response);
+    }
 
-export const changePassword = async (req, res) => {};
+    // req.body validation
+    const { error } = changePasswordValidation.validate(req.body);
+    if (error) {
+      logger.warn('Validation error', error.details[0].message);
+      return res.status(400).json({
+        success: false,
+        message: error.details[0].message,
+      });
+    }
 
-export const checkAuth = async (req, res) => {};
+    const { currentPassword, newPassword } = req.body;
+    const userId = req.user.id;
+
+    if (!currentPassword || !newPassword) {
+      return res.status(400).json({
+        success: false,
+        message: 'Current password and new password are required',
+      });
+    }
+
+    const user = await User.findById(userId).select('+password');
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: 'User not found',
+      });
+    }
+
+    const isPasswordValid = await user.comparePassword(currentPassword);
+    if (!isPasswordValid) {
+      return res.status(401).json({
+        success: false,
+        message: 'Current password is incorrect',
+      });
+    }
+
+    user.password = newPassword;
+    await user.save();
+
+    logger.info('Password changed successfully', { userId: user._id });
+
+    return res.status(200).json({
+      success: true,
+      message: 'Password changed successfully',
+    });
+  } catch (error) {
+    logger.error('Change password error occurred:', {
+      message: error.message,
+      stack: error.stack,
+    });
+    res.status(500).json({
+      success: false,
+      message: 'Something went wrong',
+    });
+  }
+};
+
+export const checkAuth = async (req, res) => {
+  try {
+    // Arcjet protection
+    const decision = await arcjetRules.authCheck.protect(req);
+    const blocked = handleArcjetDecision(decision, logger, 'auth check');
+    if (blocked) {
+      return res.status(blocked.status).json(blocked.response);
+    }
+
+    const userId = req.user.id;
+
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: 'User not found',
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      user: {
+        id: user._id,
+        fullName: user.fullName,
+        email: user.email,
+        role: user.role,
+        phone: user.phone,
+        profilePicture: user.profilePicture,
+        address: user.address,
+      },
+    });
+  } catch (error) {
+    logger.error('Check auth error occurred:', {
+      message: error.message,
+      stack: error.stack,
+    });
+    res.status(500).json({
+      success: false,
+      message: 'Something went wrong',
+    });
+  }
+};
+
+export const logoutUser = async (req, res) => {
+  try {
+    logger.info('User logged out successfully');
+
+    return res.status(200).json({
+      success: true,
+      message: 'Logged out successfully',
+    });
+  } catch (error) {
+    logger.error('Logout error occurred:', {
+      message: error.message,
+      stack: error.stack,
+    });
+    res.status(500).json({
+      success: false,
+      message: 'Something went wrong',
+    });
+  }
+};
